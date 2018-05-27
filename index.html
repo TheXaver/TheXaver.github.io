@@ -6,6 +6,7 @@
 
 	<title>Gavr.xyz	- Web Developer</title>
 	<meta name="author" content="Xaver <a@gavr.xyz>">
+	<meta name="webmoney" content="1F0D6B75-DDB2-4299-9DE4-DB0DA60C6E8C"/>
 
 	<meta property="og:url" content="https://gavr.xyz/">
 	<meta name="description" content="Xaver`s profile web site">
@@ -18,7 +19,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
-
+	
 </head>
 <body>
 <div id="preLoader"></div>
@@ -27,7 +28,7 @@
 		<div class="avatar">
 			<img id="avatar" alt="Avatar" onload="this.style.opacity = '1';">
 		</div>
-		<h1 class="text-center">Xaver</h1>
+		<h1 class="text-center">Andrei Gavrilov</h1>
 		<hr>
 		<div id="aboutme">
 			<h2 class="title">About Me</h2>
@@ -54,17 +55,29 @@
 		<hr>
 	</div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://rawgit.com/jnicol/particleground/master/jquery.particleground.min.js"></script>
 <script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
-
 <script>
-    window.onload = function () {
-        document.getElementById('preLoader').classList.add('hidden');
-        setTimeout(function () {
-            document.getElementById('preLoader').style.display = 'none';
-            document.getElementById('avatar').src = 'https://s.gravatar.com/avatar/c6d14a6e78e1c886910b1e684b6394e0?s=150';
-        }, 500);
-    }
+$("body").particleground({
+	dotColor: "#fff",
+	lineColor: "#fff",
+	onInit: function(){
+		$(this).find("canvas.pg-canvas").css({
+			position: "fixed",
+			zIndex: -1
+		});
+	}
+});
+</script>
+<script>
+window.onload = function () {
+    document.getElementById('preLoader').classList.add('hidden');
+    setTimeout(function () {
+        document.getElementById('preLoader').style.display = 'none';
+        document.getElementById('avatar').src = 'https://s.gravatar.com/avatar/c6d14a6e78e1c886910b1e684b6394e0?s=150';
+    }, 500);
+}
 </script>
 <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49026500 = new Ya.Metrika({ id:49026500, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49026500" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
