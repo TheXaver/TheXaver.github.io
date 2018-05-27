@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Gavr.xyz	- Web Developer</title>
+	<meta name="author" content="Xaver <a@gavr.xyz>">
+
+	<meta property="og:url" content="https://gavr.xyz/">
+	<meta name="description" content="Xaver`s profile web site">
+	
+	<link rel="canonical" href="https://gavr.xyz/">	
+
+	<style>
+		#preLoader:after,#preLoader:before{font-weight:700;animation:preLoaderBlink 1s linear infinite}#preLoader{position:fixed;width:100%;height:100%;left:0;top:0;overflow:hidden;z-index:5;background:#273540;color:#fff;-webkit-transition:.5s all;-moz-transition:.5s all;-ms-transition:.5s all;-o-transition:.5s all;transition:.5s all;opacity:1}#preLoader.hidden{opacity:0}#preLoader:before{position:relative;top:calc(50% - 1.5rem);left:calc(50% - 2.5rem);content:'Loading...';font-size:2rem;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}#preLoader:after{position:absolute;top:calc(50% + 1rem);left:calc(50% + 1.5rem);content:'Please, wait';font-size:1rem;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}@keyframes preLoaderBlink{50%{opacity:0}}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+
+</head>
+<body>
+<div id="preLoader"></div>
+<div class="profile-block">
+	<div class="inner">
+		<div class="avatar">
+			<img id="avatar" alt="Avatar" onload="this.style.opacity = '1';">
+		</div>
+		<h1 class="text-center">Xaver</h1>
+		<hr>
+		<div id="aboutme">
+			<h2 class="title">About Me</h2>
+
+			<p class="text-center"><span>Full-stack Web Developer</span></p>
+			<p class="text-center" id="location">
+				<i class="fas fa-map-marker-alt"></i> Russia, Vladivostok (UTC+3)
+			</p>
+		</div>
+		<hr>
+		<div id="social">
+			<h2 class="title">Social Links</h2>
+
+			<table>
+				<tr>
+					<td><a href="https://vk.com/kobaltmr" target="_blank"><i class="fab fa-vk"></i> VK</a></td>
+					<td><a href="https://twitter.com/KobaltMR" target="_blank"><i class="fab fa-twitter"></i>
+						Twitter</a></td>
+					<td><a href="https://t.me/kobaltmr" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://github.com/KobaltMR" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+					</td>
+					<td><a href="https://gitlab.com/KobaltMR" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
+					</td>
+					<td><a href="mailto:a@gavr.xyz" target="_blank"><i class="fas fa-at"></i> E-Mail</a></td>
+				</tr>
+			</table>
+		</div>
+		<hr>
+		<div id="portfolio">
+			<h2 class="title">Portfolio</h2>
+
+			<div class="cs-blurred"></div>
+		</div>
+		<hr>
+		<div id="storage">
+			<h2 class="title">Files Storage</h2>
+
+			<a onclick="return tryOpenFSModal();" class="button" href="https://kobaltmr.space/">Open</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="FSModal">
+	<p class="text-center">
+		<a href="https://kobaltmr.space/" target="_blank"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
+		|
+		<a href="#" onclick="return resetFSModall();"><i class="fas fa-home"></i> Home</a>
+		|
+		<a href="#" onclick="return closeFSModal();"><i class="fas fa-times"></i> Close</a>
+	</p>
+	<br>
+	<iframe id="FSFrame"></iframe>
+</div>
+
+<script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+
+<script>
+    window.onload = function () {
+        document.getElementById('preLoader').classList.add('hidden');
+        setTimeout(function () {
+            document.getElementById('preLoader').style.display = 'none';
+            document.getElementById('avatar').src = 'https://s.gravatar.com/avatar/c6d14a6e78e1c886910b1e684b6394e0?s=150';
+        }, 500);
+    }
+    
+    function tryOpenFSModal() {
+        document.getElementById('FSModal').style.opacity = "1";
+        document.getElementById('FSModal').classList.add('opened');
+        if (document.getElementById('FSFrame').src !== 'https://kobaltmr.space/') {
+            resetFSModall();
+        }
+        return false;
+    }
+    
+    function resetFSModall() {
+        document.getElementById('FSFrame').src = 'https://kobaltmr.space/';
+    }
+
+    function closeFSModal() {
+        document.getElementById('FSModal').style.opacity = "0";
+        setTimeout(function () {
+            document.getElementById('FSModal').classList.remove('opened');
+        }, 500);
+	    return false;
+    }
+</script>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49026500 = new Ya.Metrika({ id:49026500, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49026500" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>
