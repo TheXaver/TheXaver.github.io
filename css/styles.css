@@ -57,7 +57,6 @@ html{
     text-align:center;
     -webkit-transition:.3s box-shadow;
     -moz-transition:.3s box-shadow;
-    -ms-transition:.3s box-shadow;
     -o-transition:.3s box-shadow;
     transition:.3s box-shadow;
     filter:contrast(1.4)
@@ -77,7 +76,6 @@ html{
     opacity:0;
     -webkit-transition:.4s opacity;
     -moz-transition:.4s opacity;
-    -ms-transition:.4s opacity;
     -o-transition:.4s opacity;
     transition:.4s opacity
 }
@@ -115,12 +113,17 @@ html{
     opacity:.8;
     -webkit-transition:.3s border-color,.3s color;
     -moz-transition:.3s border-color,.3s color;
-    -ms-transition:.3s border-color,.3s color;
     -o-transition:.3s border-color,.3s color;
     transition:.3s border-color,.3s color;
     cursor:pointer;
     border:1px solid transparent;
     border-radius:3px
+}
+.profile-block #aboutme #location i {
+    position: relative;
+    top: 1px;
+    width: .6em;
+    color: #cddc39;
 }
 .profile-block #social a:hover{
     color:#fff;
