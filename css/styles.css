@@ -1,19 +1,17 @@
-.cs-blurred:after, .profile-block > .inner {
+.profile-block > .inner {
     -webkit-transform: translateX(-50%) translateY(-50%)
 }
 
-.button, .profile-block .title, .text-center, table {
+.profile-block .title, .text-center, table {
     text-align: center;
 }
 
-*, .button {
-    outline: 0;
-    text-decoration: none;
-}
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
 }
 
 body {
@@ -101,12 +99,12 @@ html {
     user-select: none
 }
 
-.profile-block #aboutme #location {
+.profile-block #location {
     color: #efefef;
     margin-top: 5px;
 }
 
-.profile-block #aboutme #location i:before {
+.profile-block #location i:before {
     margin-left: -3px;
 }
 
@@ -123,7 +121,7 @@ html {
     border-radius: 3px;
 }
 
-.profile-block #aboutme #location i {
+.profile-block #location i {
     position: relative;
     top: 1px;
     width: .6em;
