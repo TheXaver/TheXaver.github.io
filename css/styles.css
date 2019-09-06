@@ -32,7 +32,7 @@ body {
 }
 
 .profile-block > .inner {
-    width: 450px;
+    width: 420px;
     display: inline-block;
     background: rgba(56, 56, 56, .4);
     padding: 1.5rem;
@@ -53,6 +53,25 @@ body {
 .profile-block .avatar > img {
     width: 100%;
     border-radius: 50%;
+
+    transition: 0.90s;
+    -webkit-transition: 0.90s;
+    -moz-transition: 0.90s;
+    -ms-transition: 0.90s;
+    -o-transition: 0.90s;
+}
+
+.profile-block .avatar > img:hover {
+    transition: 0.90s;
+    -webkit-transition: 0.90s;
+    -moz-transition: 0.90s;
+    -ms-transition: 0.90s;
+    -o-transition: 0.90s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .profile-block h1 {
