@@ -9,7 +9,7 @@ body {
     height: 100%;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 1.2rem;
-    line-height: 1.1;
+    line-height: 1.4;
     background: #111;
     text-align: center;
 }
@@ -80,7 +80,7 @@ canvas{
     margin: .5rem 0 1rem
 }
 
-.profile-block .title {
+h2 {
     color: #acdaff;
     font-weight: 400;
     font-size: 1.3rem;
@@ -92,18 +92,15 @@ canvas{
 
 .profile-block #location {
     color: #efefef;
-    margin-top: 5px;
 }
 
-.profile-block #location i:before {
-    margin-left: -3px;
+.profile-block i {
+    margin-right: 3px;
 }
-
 .profile-block #location i {
-    position: relative;
     top: 1px;
-    width: .6em;
     color: #cddc39;
+    margin-right: 3px;
 }
 
 .profile-block .social a {
@@ -122,7 +119,6 @@ canvas{
 .profile-block .social ul li {
     display: inline;
 }
-
 
 .profile-block .social a:hover {
     color: #fff;
