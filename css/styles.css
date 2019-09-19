@@ -14,12 +14,13 @@ body {
     text-align: center;
 }
 
-canvas{
+canvas {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
 }
+
 .profile-block {
     height: 100%;
     display: flex;
@@ -97,6 +98,7 @@ h2 {
 .profile-block i {
     margin-right: 3px;
 }
+
 .profile-block #location i {
     top: 1px;
     color: #cddc39;
